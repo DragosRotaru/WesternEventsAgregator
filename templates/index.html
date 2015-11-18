@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+  <meta charset="utf-8">
+  <title>Western Events Aggregator</title>
+</head>
+
+<body>
+  <div id="navbar">
+    <h1>Western Events Aggregator</h1>
+  </div>
+  <div id="page">
+    <div class="content-select" id="Calendar">
+      <h2>Calendar</h2>
+    </div>
+    <div class="content-select" id="Groups">
+      <h2>Groups</h2>
+    </div>
+    <div class="content-select" id="Links">
+      <h2>Links</h2>
+    </div>
+    <div class="content">
+      <div id="leftcol">
+        <h4>Sources</h4>
+        <ul id="filters" class="filters">
+          {% for i in sources %}
+          <li>
+            <input type="checkbox" value="{{i.name}}" id="filter-{{i.name}}" />
+            <label for="filter-{{i.name}}">{{i.name}}</label>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div id="rightcol">
+      </div>
+    </div>
+    <div class="footer">
+    </div>
+  </div>
+</body>
+
+</html>

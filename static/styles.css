@@ -1,0 +1,60 @@
+body{
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+h1{
+  color: white;
+}
+h2{
+  color: #521e82;
+  font-size: 20px;
+}
+
+div {
+    padding: 5px;
+}
+.content{
+  border-radius: 13px;
+  margin: 10px;
+  margin-bottom: 30px;
+  margin-top: -10px;
+  height:300px;
+  background: white;
+  position: relative;
+  z-index: 2;
+}
+.footer{
+  background: #521e82;
+  height: 80px;
+}
+#navbar{
+  padding-left: 20px;
+  background: #521e82;
+}
+#page{
+  background: grey;
+  padding: 0px;
+  padding-top: 30px;
+}
+.content-select{
+  background: white;
+  display: inline-block;
+  border-radius: 7px;
+  margin-left: 5px;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow: 10px 10px 5px #888888;
+}
+#Calendar{
+  margin-left: 30px;
+}
+#rightcol{
+   float:left;
+   width:15%;
+   height: 270px;
+}
+#leftcol{
+   float:right;
+   width:82%;
+   height: 200px;
+}
