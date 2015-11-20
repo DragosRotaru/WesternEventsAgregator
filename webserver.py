@@ -20,6 +20,18 @@ def showmainpage():
     # return "This page will show all my sources"
     return render_template('index.html', events=events, sources=sources)
 
+@app.route('/about')
+@app.route('/about.html')
+def showaboutpage():
+    # return "This will display the websites about page"
+    return render_template('about.html')
+
+@app.route('/home')
+@app.route('/home.html')
+def showhomepage():
+    # return "This will display the websites about page"
+    return render_template('home.html')
+
 
 if __name__ == '__main__':
     app.debug = True
