@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
   <meta charset="utf-8">
@@ -9,30 +8,59 @@
 
 <body>
   <div id="navbar">
-    <h1>Western Events Aggregator</h1>
-  </div>
+  <div class='nav' id="logo"><a href="/"><h1>Western Events Aggregator</h1></a></div>
+  <nav class="nav">
+          <ul>
+              <li><a href="#">Add</a>
+              <!-- First Tier Drop Down -->
+              <ul>
+                  <li><a href="#">Event</a></li>
+                  <li><a href="#">Resource</a></li>
+                  <li><a href="#">Tutorials</a></li>
+              </ul>
+              </li>
+              <li><a href="#">Get Email</a></li>
+              <li><a href="#">Inspiration</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">About</a></li>
+          </ul>
+      </nav>
+    </div>
   <div id="page">
     <div class="content-select" id="Calendar">
-      <h2>Calendar</h2>
+      <h3>Calendar</h3>
     </div>
     <div class="content-select" id="Groups">
-      <h2>Groups</h2>
+      <h3>Groups</h3>
     </div>
     <div class="content-select" id="Links">
-      <h2>Links</h2>
+      <h3>Links</h3>
     </div>
     <div class="content">
       <div id="leftcol">
-        <h4>Sources</h4>
-        <ul id="filters" class="filters">
-          {% for i in sources %}
-          <li>
-            <input type="checkbox" value="{{i.name}}" id="filter-{{i.name}}" />
-            <label for="filter-{{i.name}}">{{i.name}}</label>
-          </li>
-          {% endfor %}
-        </ul>
+        <div class="filters">
+          <h4>Filters</h4>
+          <ul>
+            <h4>Sources</h4>
+            {% for i in sources %}
+            <li>
+              <input type="checkbox" value="{{i.name}}" id="filter-{{i.name}}" />
+              <label for="filter-{{i.name}}">{{i.name}}</label>
+            </li>
+            {% endfor %}
+          </ul>
+          <ul>
+            <h4>Tags</h4>
+            {% for i in tags %}
+            <li>
+              <input type="checkbox" value="{{i.name}}" id="filter-{{i.name}}" />
+              <label for="filter-{{i.name}}">{{i.name}}</label>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
+      <div id="division"></div>
       <div id="rightcol">
       </div>
     </div>
@@ -40,5 +68,4 @@
     </div>
   </div>
 </body>
-
 </html>
