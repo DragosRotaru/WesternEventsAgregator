@@ -32,6 +32,13 @@ def showcontactpage():
     # return "This will display the websites contact page"
     return render_template('contact.html')
 
+@app.route('/email')
+@app.route('/email.html')
+def showemailpage():
+    # return "This will display the websites email page"
+    return render_template('email.html')
+
+
 
 @app.route('/addevent')
 @app.route('/addevent.html')
