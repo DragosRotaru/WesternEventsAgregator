@@ -26,6 +26,13 @@ def showaboutpage():
     # return "This will display the websites about page"
     return render_template('about.html')
 
+@app.route('/contact')
+@app.route('/contact.html')
+def showcontactpage():
+    # return "This will display the websites contact page"
+    return render_template('contact.html')
+
+
 @app.route('/addevent')
 @app.route('/addevent.html')
 def showaddeventpage():

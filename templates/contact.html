@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+</html>
+<head>
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+  <meta charset="utf-8">
+  <title>About</title>
+</head>
+
+<body>
+  <div id="navbar">
+  <div class='nav' id="logo"><a href="/"><h1>Western Events Aggregator</h1></a></div>
+  <nav class="nav">
+          <ul>
+              <li><a href="/addevent">Add</a>
+              <!-- First Tier Drop Down -->
+              <ul>
+                <li><a href="/addevent">Event</a></li>
+                <li><a href="/addresource">Resource</a></li>
+                <li><a href="/addsource">Source</a></li>
+              </ul>
+            </li>
+            <li><a href="/email">Get Email</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/about">About</a></li>
+          </ul>
+      </nav>
+    </div>
+  <div class="page">
+    <div class="content">
+    </div>
+  </div>
+  <div class="footer">
+  </div>
+
+  </body>
+</html>
