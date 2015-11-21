@@ -26,6 +26,24 @@ def showaboutpage():
     # return "This will display the websites about page"
     return render_template('about.html')
 
+@app.route('/addevent')
+@app.route('/addevent.html')
+def showaddeventpage():
+    # return "This will display the websites about page"
+    return render_template('addevent.html')
+
+@app.route('/addresource')
+@app.route('/addresource.html')
+def showaddresourcepage():
+    # return "This will display the websites about page"
+    return render_template('addresource.html')
+
+@app.route('/addsource')
+@app.route('/addsource.html')
+def showaddsourcepage():
+    # return "This will display the websites about page"
+    return render_template('addsource.html')
+
 @app.route('/home')
 @app.route('/home.html')
 def showhomepage():
