@@ -165,3 +165,8 @@ nav ul ul li {
 	width: auto;
 	height: 100%;
 }
+
+#calendar {
+	width: 100%;
+	margin: 0 auto;
+}
