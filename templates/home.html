@@ -3,38 +3,7 @@
   <head>
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles1.css') }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>
-    $(document).ready(function() {
-
-      $('.tab-content>div:not(":first-of-type")').hide();
-      $('<div class="line"></div>').appendTo('.tab-menu li');
-      $('.tab-menu li:first-of-type').find(':first').width('100%')
-
-      $('.tab-menu li').each(function(i) {
-        $(this).attr('data-tab', 'tab'+i);
-      });
-
-      $('.tab-content>div').each(function(i) {
-        $(this).attr('data-tab', 'tab'+i);
-      });
-
-      $('.tab-menu li').on('click', function() {
-
-        var dataTab = $(this).data('tab');
-        var getWrapper = $(this).closest('.tab-wrapper');
-        var line = $(this).find('.line');
-
-        getWrapper.find('.tab-menu li').removeClass('active');
-        $(this).addClass('active');
-
-        getWrapper.find('.line').width(0);
-        line.animate({'width':'100%'}, 'fast');
-        getWrapper.find('.tab-content>div').hide();
-        getWrapper.find('.tab-content>div[data-tab='+dataTab+']').show();
-      });
-
-    });
-    </script>
+    <script src="{{ url_for('static', filename='tabmenu.js') }}"></script>
     <meta charset="utf-8">
     <title>Home</title>
   </head>
