@@ -102,6 +102,15 @@ nav ul ul li {
   min-height:200px;
 }
 
+.line {
+  position:absolute;
+  width: 0;
+  height: 7px;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+}
+
 .content{
   margin-bottom: 10px;
   margin-top: 0px;
