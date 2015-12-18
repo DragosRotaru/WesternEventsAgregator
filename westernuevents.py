@@ -58,12 +58,5 @@ def showaddsourcepage():
     # return "This will display the websites about page"
     return render_template('addsource.html')
 
-@app.route('/home')
-@app.route('/home.html')
-def showhomepage():
-    # return "This will display the websites about page"
-    return render_template('home.html')
-
-
 if __name__ == '__main__':
     app.run(host = '0.0.0.0')
