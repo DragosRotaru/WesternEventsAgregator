@@ -34,52 +34,52 @@
     </nav>
   </div>
   <div class="page">
-		<div class="tab-wrapper">
-			<ul class="tab-menu">
-				<li class="active">Calendar</li>
-				<li>Groups</li>
-				<li>Resources</li>
-			</ul>
-			<div class="tab-content">
-				<div>
-					<div class="content">
-						<div id="leftcol">
-							<div class="filters">
-								<h4>view:</h4>
-								<input type="radio" name="view" value="C"> calendar</input>
-								<input type="radio" name="view" vaule="L"> list</input>
-								<h4>filter by:</h4>
-								<h4>sources</h4>
-								<ul>
-									{% for i in sources %}
-									<li>
-										<input type="checkbox" value="{{i.name}}" id="filter-{{i.name}}" />
-										<label for="filter-{{i.name}}">{{i.name}}</label>
-									</li>
-									{% endfor %}
-								</ul>
-								<h4>tags</h4>
-								<ul>
-									{% for i in tags %}
-									<li>
-										<input type="checkbox" value="{{i.name}}" id="filter-{{i.name}}" />
-										<label for="filter-{{i.name}}">{{i.name}}</label>
-									</li>
-									{% endfor %}
-								</ul>
-							</div>
-						</div>
-						<div id="rightcol">
+    <div class="tab-wrapper">
+      <ul class="tab-menu">
+        <li class="active">Calendar</li>
+        <li>Groups</li>
+        <li>Resources</li>
+      </ul>
+      <div class="tab-content">
+        <div class="content">
+          <div id="leftcol">
+            <div class="filters">
+              <h4>view:</h4>
+              <input type="radio" name="view" value="C"> calendar</input>
+              <input type="radio" name="view" vaule="L"> list</input>
+              <h4>filter by:</h4>
+              <h4>sources</h4>
+              <ul>
+                {% for i in sources %}
+                <li>
+                  <input type="checkbox" value="{{i.name}}" id="filter-{{i.name}}" />
+                  <label for="filter-{{i.name}}">{{i.name}}</label>
+                </li>
+                {% endfor %}
+              </ul>
+              <h4>tags</h4>
+              <ul>
+                {% for i in tags %}
+                <li>
+                  <input type="checkbox" value="{{i.name}}" id="filter-{{i.name}}" />
+                  <label for="filter-{{i.name}}">{{i.name}}</label>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div id="rightcol">
 
-						</div>
-					</div>
-				</div>
-				<div>
-				</div>
-				<div>
-				</div>
-			</div><!-- //tab-content -->
-		</div><!-- //tab-wrapper -->
+          </div>
+        </div>
+        <div>
+        </div>
+        <div>
+        </div>
+      </div>
+      <!-- //tab-content -->
+    </div>
+    <!-- //tab-wrapper -->
     <div class="footer">
     </div>
   </div>
