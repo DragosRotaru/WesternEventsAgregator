@@ -169,5 +169,6 @@ nav ul ul li {
 
 #calendar {
 	width: 100%;
-	margin: 0 auto;
+	margin: 30px auto;
+	margin-left: 0px auto;
 }
