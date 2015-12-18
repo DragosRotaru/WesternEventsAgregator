@@ -62,23 +62,46 @@ nav ul ul li {
   text-transform: uppercase;
 
 }
-.content-select{
-  background: #3b1d63;
+
+
+.tab-wrapper {
+  margin: 60px auto;
+  width: 70%;
+  max-width:500px;
+}
+
+.tab-menu li {
+  position:relative;
+  background-color: #521e82;
+  color:#fff;
   display: inline-block;
-  border-radius: 7px;
-  margin-left: 5px;
-  padding: 0px;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-size: 14px;
-  color:white;
-  text-transform: uppercase;
-  line-height: 10px;
-  z-index: 1;
+  padding: 20px 40px;
+  opacity: 0.8;
+  cursor:pointer;
+  z-index:0;
 }
-.content-select:hover {
-	background-color: #521e82;
+
+.tab-menu li:hover {
+  color:#fff;
 }
+
+.tab-menu li.active {
+  color:#fff;
+  opacity: 1;
+}
+
+.tab-menu li.active:hover {
+  color:#fff;
+}
+
+.tab-content>div {
+  background-color: #fff;
+  box-sizing:border-box;
+  width: 100%;
+  padding: 50px;
+  min-height:200px;
+}
+
 .content{
   margin-bottom: 10px;
   margin-top: 0px;
@@ -132,9 +155,6 @@ nav ul ul li {
   text-align:left;
 }
 
-#Calendar{
-  margin-left: 30px;
-}
 #rightcol{
    float:right;
    width:80%;
