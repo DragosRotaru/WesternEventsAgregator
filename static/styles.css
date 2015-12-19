@@ -134,11 +134,10 @@ nav ul ul li {
  min-width: 1200px;
 }
 .footer{
-	align: center;
  background: #521e82;
  padding: 50px;
  color: white;
- min-height: 200px;
+ min-height: 150px;
  width:100%;
  min-width: 1200px;
 }
