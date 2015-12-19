@@ -134,6 +134,7 @@ nav ul ul li {
  min-width: 1200px;
 }
 .footer{
+	align: center;
  background: #521e82;
  padding: 50px;
  color: white;
@@ -143,6 +144,7 @@ nav ul ul li {
 }
 .footer a{
 	color: white;
+	text-decoration: underline;
 }
 
 #navbar {
