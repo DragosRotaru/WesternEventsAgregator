@@ -1,1 +1,3 @@
-/Westernuevents.db
+*.DS_Store
+*.db
+*.pyc
