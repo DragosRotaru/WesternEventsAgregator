@@ -70,6 +70,7 @@ nav ul ul li {
  color:#fff;
  display: inline-block;
  padding: 20px 40px;
+ margin-bottom: 0px;
  opacity: 0.8;
  cursor:pointer;
  z-index:0;
