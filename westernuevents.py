@@ -20,11 +20,6 @@ def showmainpage():
     # return "This page will show all my sources"
     return render_template('index.html', events=events, sources=sources)
 
-@app.route('/about')
-@app.route('/about.html')
-def showaboutpage():
-    # return "This will display the websites about page"
-    return render_template('about.html')
 
 @app.route('/contact')
 @app.route('/contact.html')
