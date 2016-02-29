@@ -41,11 +41,11 @@ def showaddeventpage():
     # return "This will display the websites about page"
     return render_template('addevent.html')
 
-@app.route('/addresource')
-@app.route('/addresource.html')
-def showaddresourcepage():
+@app.route('/addlink')
+@app.route('/addlink.html')
+def showaddlinkpage():
     # return "This will display the websites about page"
-    return render_template('addresource.html')
+    return render_template('addlink.html')
 
 @app.route('/addsource')
 @app.route('/addsource.html')
