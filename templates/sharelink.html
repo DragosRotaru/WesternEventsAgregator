@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}addresource{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block page %}
+  <h1>Add Link</h1>
+    <form action="" method="post" name="sharelink">
+      {{ form.hidden_tag() }}
+      <p>
+          Please enter any link which you believe would be helpful to the UWO community:<br>
+          {{ form.url() }}<br>
+      </p>
+      <p><input type="submit" value="Share"></p>
+{% endblock %}
+{% block footer %}
+ {{ super() }}
+ {% endblock %}

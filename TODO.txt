@@ -36,6 +36,7 @@ add suggested source procedure:
 5. addsource.py is run 
     1. source added as group to mail chimp
     2. source removed from table
+    3. source added to table with category included
 6. database update script is run
 
 add suggested event procedure:

@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}addsource{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block page %}
+  <h1>Add Source</h1>
+  <form action="" method="post" name="shareevent">
+      {{ form.hidden_tag() }}
+      <p>
+          Please enter a website which hosts event information relevant to the UWO community:<br>
+          {{ form.url() }}<br>
+      </p>
+      <p><input type="submit" value="Share"></p>
+{% endblock %}
+{% block footer %}
+ {{ super() }}
+ {% endblock %}

@@ -1,54 +1,47 @@
 from flask import Flask, render_template, request, redirect, jsonify, url_for
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from database_setup import Base, Source, SuggestedSource, Event
+from forms import *
 
 app = Flask(__name__)
-
-engine = create_engine('sqlite:///Westernevents.db')
-Base.metadata.bind = engine
-
-DBSession = sessionmaker(bind=engine)
-session = DBSession()
+app.config.from_object('config')
 
 @app.route('/')
 @app.route('/index.html')
 def index():
-    events = session.query(Event).all()
-    sources = session.query(Source).all()
-    # return ""
-    return render_template('index.html', events=events, sources=sources)
+    # return "Display the main page"
+    return render_template('index.html')
 
 
-@app.route('/api/v1.0/events', methods=['GET'])
+@app.route('/api/events', methods=['GET'])
 def getevents():
-    return jsonify({'events': tasks})
+    #return "Provide event information"
+    return jsonify({'events': 'TODO'})
 
 @app.route('/email')
 @app.route('/email.html')
 def showemailpage():
-    # return "This will display the websites email page"
+    # return "Display newsletter signup"
     return render_template('email.html')
 
+@app.route('/shareevent', methods=['GET', 'POST'])
+@app.route('/shareevent.html', methods=['GET', 'POST'])
+def showshareeventpage():
+    # return "Display ShareEventForm"
+    form = ShareEventForm()
+    return render_template('shareevent.html', form=form)
 
+@app.route('/sharelink', methods=['GET', 'POST'])
+@app.route('/sharelink.html', methods=['GET', 'POST'])
+def showsharelinkpage():
+    # return "Display ShareLinkForm"
+    form = ShareLinkForm()
+    return render_template('sharelink.html', form=form)
 
-@app.route('/addevent')
-@app.route('/addevent.html')
-def showaddeventpage():
-    # return "This will display the websites about page"
-    return render_template('addevent.html')
-
-@app.route('/addlink')
-@app.route('/addlink.html')
-def showaddlinkpage():
-    # return "This will display the websites about page"
-    return render_template('addlink.html')
-
-@app.route('/addsource')
-@app.route('/addsource.html')
-def showaddsourcepage():
-    # return "This will display the websites about page"
-    return render_template('addsource.html')
+@app.route('/sharesource', methods=['GET', 'POST'])
+@app.route('/sharesource.html', methods=['GET', 'POST'])
+def showsharesourcepage():
+    # return "Display ShareSourceForm"
+    form = ShareSourceForm()
+    return render_template('sharesource.html', form=form)
 
 if __name__ == '__main__':
-    app.run(host = '0.0.0.0', debug=True)
+    app.run(host = '0.0.0.0')
