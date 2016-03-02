@@ -7,3 +7,42 @@ scraping scripts
 db management system
 integrate fb groups
 add resources
+
+database setup 
+	fullcalendar json interface
+	mailchimp API
+
+mailchimp email adresses
+
+
+data structures:
+	suggested event
+	suggested source
+	suggested link 
+	link
+	email subscription
+	event
+	source
+
+
+json feed for each individual source
+
+
+add suggested source procedure:
+1. user suggests source on  form
+2. form adds source to database under suggested source table
+3. I write a script to collect data from source
+4. I write a JSON API and full calendar javascript
+5. addsource.py is run 
+    1. source added as group to mail chimp
+    2. source removed from table
+6. database update script is run
+
+add suggested event procedure:
+1. script reads suggestions, I validate one by one
+
+add suggested link procedure:
+1. script reads suggestions, I validate one by one
+
+user email subscription procedure:
+1. integrated mail chimp subscription form
