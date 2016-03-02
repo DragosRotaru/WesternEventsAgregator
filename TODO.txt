@@ -1,10 +1,8 @@
-modify templating to inherit common elements like footer,nav,etc
-implement serarch function
-integrate fullcalendar with page
-integrate fullcalendar with scraped data
-write about page, footer, contact
-write email page, impement automated e-newsletter
-event page template
+serarch function
+fullcalendar filters
+event pages
+embed email subscription
+create JSON feed
 scraping scripts
 db management system
 integrate fb groups

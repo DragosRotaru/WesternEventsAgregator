@@ -13,13 +13,15 @@
   <div id="navbar">
     <div class='nav' id="logo">
       <a href="/">
-        <h1>Western Events Aggregator</h1>
+        <h1>Western University Events</h1>
       </a>
     </div>
     <nav class="nav">
 
       <ul>
-        <li><a href="/addevent">Add</a>
+        <li><a href="/">Home</a></li>
+        <li><a href="/email">Email Signup</a></li>
+        <li><a href="/addevent">Share</a>
           <!-- First Tier Drop Down -->
           <ul>
             <li><a href="/addevent">Event</a></li>
@@ -27,8 +29,6 @@
             <li><a href="/addsource">Source</a></li>
           </ul>
         </li>
-        <li><a href="/email">Get Email</a></li>
-        <li><a href="/contact">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -36,8 +36,9 @@
   </div>
   <div class="footer">
 		{% block footer %}
-		 &copy; Copyright 2015 by <a href="http://www.dragosrotaru.com/">Dragos Rotaru</a>
-		 {% endblock %}
+		 <span style="padding-right:15em;">&copy; 2015 <a href="http://www.dragosrotaru.com/">Dragos Rotaru</a></span> This unofficial website is not affiliated to Western University  <span style="padding-left:15em;"> Contact: drotaru@uwo.ca</span>
+
+		{% endblock %}
   </div>
 </body>
 

@@ -11,21 +11,18 @@ Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
-# Show Main page
 @app.route('/')
 @app.route('/index.html')
-def showmainpage():
+def index():
     events = session.query(Event).all()
     sources = session.query(Source).all()
-    # return "This page will show all my sources"
+    # return ""
     return render_template('index.html', events=events, sources=sources)
 
 
-@app.route('/contact')
-@app.route('/contact.html')
-def showcontactpage():
-    # return "This will display the websites contact page"
-    return render_template('contact.html')
+@app.route('/api/v1.0/events', methods=['GET'])
+def getevents():
+    return jsonify({'events': tasks})
 
 @app.route('/email')
 @app.route('/email.html')
@@ -54,4 +51,4 @@ def showaddsourcepage():
     return render_template('addsource.html')
 
 if __name__ == '__main__':
-    app.run(host = '0.0.0.0')
+    app.run(host = '0.0.0.0', debug=True)

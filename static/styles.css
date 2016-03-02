@@ -53,14 +53,13 @@ nav ul ul li {
  float:none;
  display:list-item;
  position: relative;
- right: 28px;
+ right: 34px;
 }
 .nav{
  z-index: 3;
  flex:12;
  font-size: 14px;
  text-align:center;
- text-transform: uppercase;
 
 }
 
