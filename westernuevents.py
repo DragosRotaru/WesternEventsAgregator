@@ -53,4 +53,7 @@ def showsharesourcepage():
     return render_template('sharesource.html', form=form)
 
 if __name__ == '__main__':
-    app.run(debug=True) #app.run(host = '0.0.0.0')
+	if app.config['ENV'] == 'DEV':
+        app.run(debug=True)
+	if app.config['ENV'] == 'PROD':
+		app.run(host = '0.0.0.0')
