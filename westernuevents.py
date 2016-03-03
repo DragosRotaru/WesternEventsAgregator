@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, jsonify, url_for
+from flask import Flask, render_template, request, redirect, jsonify, url_for, flash
 from forms import *
 
 app = Flask(__name__)
@@ -27,6 +27,9 @@ def showemailpage():
 def showshareeventpage():
     # return "Display ShareEventForm"
     form = ShareEventForm()
+    if form.validate_on_submit():
+        flash('Event Shared: %s' % (form.title.data))
+        return redirect('/')
     return render_template('shareevent.html', form=form)
 
 @app.route('/sharelink', methods=['GET', 'POST'])
@@ -34,6 +37,9 @@ def showshareeventpage():
 def showsharelinkpage():
     # return "Display ShareLinkForm"
     form = ShareLinkForm()
+    if form.validate_on_submit():
+        flash('Link Received: %s' % (form.url.data))
+        return redirect('/')
     return render_template('sharelink.html', form=form)
 
 @app.route('/sharesource', methods=['GET', 'POST'])
@@ -41,6 +47,9 @@ def showsharelinkpage():
 def showsharesourcepage():
     # return "Display ShareSourceForm"
     form = ShareSourceForm()
+    if form.validate_on_submit():
+        flash('URL Reveived: %s' % (form.url.data))
+        return redirect('/')
     return render_template('sharesource.html', form=form)
 
 if __name__ == '__main__':

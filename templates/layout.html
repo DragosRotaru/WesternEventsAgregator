@@ -4,22 +4,31 @@
 <head>
   {% block head %}
   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <meta charset="utf-8">
   <title>{% block title %}{% endblock %} - WesternUEvents</title>
   {% endblock %}
 </head>
 
 <body>
+  {% with messages = get_flashed_messages() %} {% if messages %}
+  <div id="alert">
+    {% for message in messages %}
+    <a class="alert" href="#alert">
+					{{ message }}
+		</a> {% endfor %}
+  </div>
+  {% endif %} {% endwith %}
   <div id="header">
-		<div id="logo">
-			<img src="{{ url_for('static', filename='western-logo.png') }}">
-		</div>
-      <a href="/">
-        <h1>Western<br> University<br> Events</h1>
-      </a>
-			<div id="spacer">
+    <div id="logo">
+      <img src="{{ url_for('static', filename='western-logo.png') }}">
+    </div>
+    <a href="/">
+      <h1>Western<br> University<br> Events</h1>
+    </a>
+    <div id="spacer">
 
-			</div>
+    </div>
     <nav>
       <ul>
         <li><a href="/">Home</a></li>
@@ -36,21 +45,18 @@
     </nav>
   </div>
   <div id="background">
-		{% block page %}{% endblock %}
+    {% block page %}{% endblock %}
   </div>
   <div class="footer">
     {% block footer %}
-		<p>
-			This website is not affiliated, operated or maintained by Western University.
-			All trademarks are property of Western University.
-			The official events calendar can be found at <a href="http://www.events.westernu.ca">www.events.westernu.ca</a>
-		</p>
+    <p>
+      This website is not affiliated to, operated or maintained by Western University. All trademarks are property of Western University. The official events calendar can be found at <a href="http://www.events.westernu.ca">www.events.westernu.ca</a>
+    </p>
     <span>
 			&copy; 2015 <a href="http://www.dragosrotaru.com/">Dragos Rotaru</a>
 		</span><span>
 			 Contact: <a href="mailto:drotaru@uwo.ca">drotaru@uwo.ca</a>
-		</span>
-		{% endblock%}
+		</span> {% endblock%}
   </div>
 </body>
 
