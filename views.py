@@ -1,8 +1,6 @@
-from flask import Flask, render_template, request, redirect, jsonify, url_for, flash
+from flask import render_template, request, redirect, jsonify, url_for, flash
+from app import app
 from forms import *
-
-app = Flask(__name__)
-app.config.from_object('config')
 
 @app.route('/')
 @app.route('/index.html')
@@ -51,9 +49,3 @@ def showsharesourcepage():
         flash('URL Reveived: %s' % (form.url.data))
         return redirect('/')
     return render_template('sharesource.html', form=form)
-
-if __name__ == '__main__':
-    if app.config['ENV'] == 'DEV':
-        app.run(debug=True)
-    if app.config['ENV'] == 'PROD':
-        app.run(host = '0.0.0.0')
