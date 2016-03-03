@@ -1,11 +1,16 @@
-{% extends "layout.html" %}
-{% block title %}addevent{% endblock %}
-{% block head %}
-  {{ super() }}
-{% endblock %}
-{% block page %}
-  <h1>Add Event</h1>
-{% endblock %}
-{% block footer %}
- {{ super() }}
- {% endblock %}
+{% extends "layout.html" %} {% block title %}shareevent{% endblock %} {% block head %} {{ super() }} {% endblock %} {% block page %}
+<h1>Add Event</h1>
+<div id="page">
+<form action="" method="post" name="sharelink">
+  {{ form.hidden_tag() }}
+  <p>
+    URL:
+    <br>
+    <br> {{ form.url() }}
+    <br>
+  </p>
+  <p>
+    <input type="submit" value="Send">
+  </p>
+</div>
+  {% endblock %} {% block footer %} {{ super() }} {% endblock %}

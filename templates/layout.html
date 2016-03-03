@@ -2,27 +2,30 @@
 <html>
 
 <head>
-	{% block head %}
+  {% block head %}
   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
   <meta charset="utf-8">
   <title>{% block title %}{% endblock %} - WesternUEvents</title>
-	{% endblock %}
+  {% endblock %}
 </head>
 
 <body>
-  <div id="navbar">
-    <div class='nav' id="logo">
+  <div id="header">
+		<div id="logo">
+			<img src="{{ url_for('static', filename='western-logo.png') }}">
+		</div>
       <a href="/">
-        <h1>Western University Events</h1>
+        <h1>Western<br> University<br> Events</h1>
       </a>
-    </div>
-    <nav class="nav">
+			<div id="spacer">
 
+			</div>
+    <nav>
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/email">Email Signup</a></li>
+        <li><a href="/email">Weekly Emails </a></li>
         <li><a href="/shareevent">Share</a>
-          <!-- First Tier Drop Down -->
+          <!-- Drop Down -->
           <ul>
             <li><a href="/shareevent">Event</a></li>
             <li><a href="/sharelink">Link</a></li>
@@ -32,13 +35,22 @@
       </ul>
     </nav>
   </div>
-  <div class="page">{% block page %}{% endblock %}
+  <div id="background">
+		{% block page %}{% endblock %}
   </div>
   <div class="footer">
-		{% block footer %}
-		 <span style="padding-right:15em;">&copy; 2015 <a href="http://www.dragosrotaru.com/">Dragos Rotaru</a></span> This unofficial website is not affiliated to Western University  <span style="padding-left:15em;"> Contact: drotaru@uwo.ca</span>
-
-		{% endblock %}
+    {% block footer %}
+		<p>
+			This website is not affiliated, operated or maintained by Western University.
+			All trademarks are property of Western University.
+			The official events calendar can be found at <a href="http://www.events.westernu.ca">www.events.westernu.ca</a>
+		</p>
+    <span>
+			&copy; 2015 <a href="http://www.dragosrotaru.com/">Dragos Rotaru</a>
+		</span><span>
+			 Contact: <a href="mailto:drotaru@uwo.ca">drotaru@uwo.ca</a>
+		</span>
+		{% endblock%}
   </div>
 </body>
 

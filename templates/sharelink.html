@@ -1,18 +1,18 @@
-{% extends "layout.html" %}
-{% block title %}addresource{% endblock %}
-{% block head %}
-  {{ super() }}
-{% endblock %}
-{% block page %}
-  <h1>Add Link</h1>
-    <form action="" method="post" name="sharelink">
-      {{ form.hidden_tag() }}
-      <p>
-          Please enter any link which you believe would be helpful to the UWO community:<br>
-          {{ form.url() }}<br>
-      </p>
-      <p><input type="submit" value="Share"></p>
-{% endblock %}
-{% block footer %}
- {{ super() }}
- {% endblock %}
+{% extends "layout.html" %} {% block title %}shareresource{% endblock %} {% block head %} {{ super() }} {% endblock %} {% block page %}
+<h1>Share Link</h1>
+<div id="page">
+<form action="" method="post" name="sharelink">
+  {{ form.hidden_tag() }}
+  <p>
+		Know of a website others might find useful? Then please enter it below and I will add it to the list!
+		<br>
+		<br>
+		URL:
+		{{ form.url() }}
+		<br>
+  </p>
+  <p>
+    <input type="submit" value="Send">
+  </p>
+</div>
+  {% endblock %} {% block footer %} {{ super() }} {% endblock %}

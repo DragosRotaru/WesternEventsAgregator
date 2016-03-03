@@ -8,7 +8,7 @@ db management system
 integrate fb groups
 add resources
 
-database setup 
+database setup
 	fullcalendar json interface
 	mailchimp API
 
@@ -18,7 +18,7 @@ mailchimp email adresses
 data structures:
 	suggested event
 	suggested source
-	suggested link 
+	suggested link
 	link
 	email subscription
 	event
@@ -33,7 +33,7 @@ add suggested source procedure:
 2. form adds source to database under suggested source table
 3. I write a script to collect data from source
 4. I write a JSON API and full calendar javascript
-5. addsource.py is run 
+5. addsource.py is run
     1. source added as group to mail chimp
     2. source removed from table
     3. source added to table with category included
@@ -47,3 +47,8 @@ add suggested link procedure:
 
 user email subscription procedure:
 1. integrated mail chimp subscription form
+
+
+TODO:
+Setup link, source forms.
+Setup Database

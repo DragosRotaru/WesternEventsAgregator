@@ -2,12 +2,12 @@ from flask.ext.wtf import Form
 from wtforms import StringField, BooleanField
 from wtforms.validators import DataRequired, URL
 
-class SuggestedSourceForm(Form):
+class ShareSourceForm(Form):
 	url = StringField('URL', validators=[DataRequired(), URL()])
 
-class SuggestedLinkForm(Form):
+class ShareLinkForm(Form):
 	url = StringField('URL', validators=[DataRequired(), URL()])
 
-class SuggestedEventForm(Form):
+class ShareEventForm(Form):
 	title = StringField('Title', validators=[DataRequired()])
 	url = StringField('URL', validators=[DataRequired(), URL()])
