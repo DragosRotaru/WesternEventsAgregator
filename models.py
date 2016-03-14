@@ -13,7 +13,7 @@ class Category(db.Model):
 
 class Email(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(64), index=True unique=True)
+    email = db.Column(db.String(64), index=True, unique=True)
     entity = db.relationship('Post', backref='author', lazy='dynamic')
 
     def __repr__(self):
@@ -56,7 +56,7 @@ class Event(db.Model):
     timestamp = db.Column(db.DateTime)
     dateadded = db.Column(db.DateTime)
     Category = db.Column(db.Integer, db.ForeignKey('Category.id'))
-	email = db.Column(db.Integer, db.ForeignKey('Email.id'))
+    email = db.Column(db.Integer, db.ForeignKey('Email.id'))
 
     def __repr__(self):
         return '<Event %r>' % (self.nickname)
