@@ -28,4 +28,4 @@ def showshareeventpage():
     if form.validate_on_submit():
         flash('Event Shared: %s' % (form.title.data))
         return redirect('/')
-    return render_template('shareevent.html', form=form)
+    return render_template('share.html', form=form)
