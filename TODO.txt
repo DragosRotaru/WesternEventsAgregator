@@ -20,11 +20,11 @@ data structures:
 	suggested source
 	suggested link
 	link
-	email subscription
 	event
 	source
-
-
+	l_category
+	e_category
+	
 json feed for each individual source
 
 
